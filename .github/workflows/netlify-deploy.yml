@@ -3,7 +3,7 @@ name: Deploy to Netlify
 on:
   push:
     branches:
-      - master # หรือชื่อ branch ที่คุณต้องการให้ trigger
+      - main # เปลี่ยนเป็น branch ที่คุณต้องการให้ deploy
 
 jobs:
   deploy:
@@ -12,6 +12,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Trigger Netlify Build
+      - name: Trigger Netlify build
         run: |
-          curl -X POST -d '{}' https://dd3ho-expense-tracker.netlify.app/
+          curl -X POST -d {} https://api.netlify.com/build_hooks/66e070e7ff06c465cdadd79c
+        env:
+          NETLIFY_BUILD_HOOK_URL: ${{ secrets.NETLIFY_BUILD_HOOK_URL }}
