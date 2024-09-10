@@ -72,24 +72,24 @@ function App() {
   // การเรียกใช้ reducer
   // const [result, dispatch] = useReducer(reducer,count)
 
-  // reducer showReport
-  // const [showReport, setShowReport] = useState(true)
+  //reducer showReport
+  const [showReport, setShowReport] = useState(true)
   
-  // const showReportReducer = (state, action) => {
-  //   // state ที่เราต้องการให้เกิด action
-  //   // action คือรูปแบบการกระทำต่างๆ ที่เราจะทำกับ state
-  //   switch(action.type){
-  //     case "SHOW" :
-  //       return setShowReport(true);
-  //     case "HIDE" :
-  //       return setShowReport(false);
-  //     default:
-  //       // จัดการกรณีที่ไม่มี case ตรงกับ action.type
-  //       return state;
-  //   }
-  // }
+  const showReportReducer = (state, action) => {
+    // state ที่เราต้องการให้เกิด action
+    // action คือรูปแบบการกระทำต่างๆ ที่เราจะทำกับ state
+    switch(action.type){
+      case "SHOW" :
+        return setShowReport(true);
+      case "HIDE" :
+        return setShowReport(false);
+      default:
+        // จัดการกรณีที่ไม่มี case ตรงกับ action.type
+        return state;
+    }
+  }
   
-  // const [showReportResult, showReportDispatch] = useReducer(showReportReducer,count)
+  const [showReportResult, showReportDispatch] = useReducer(showReportReducer,count)
 
   return (
     <>
