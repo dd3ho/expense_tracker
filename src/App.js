@@ -12,12 +12,12 @@ const Title =()=><h1 className='description'>แอพบัญชีราย�
 
 function App() {
 
-  const initState = [
-    {id: 1, title: "rent-house", amount: -2000},
-    {id: 2, title: "income", amount: 35000},
-    {id: 3, title: "travel", amount: -1000},
-    {id: 4, title: "Sales income", amount: 5000},
-  ]
+  // const initState = [
+  //   {id: 1, title: "rent-house", amount: -2000},
+  //   {id: 2, title: "income", amount: 35000},
+  //   {id: 3, title: "travel", amount: -1000},
+  //   {id: 4, title: "Sales income", amount: 5000},
+  // ]
   // useState
   const [items, setItems] = useState([]);
   const [reportIncome, setReportIncome] = useState(0);
@@ -55,7 +55,7 @@ function App() {
   }
 
   // reducer state
-  const [count, setCount] =useState(0)
+  // const [count, setCount] =useState(0)
   const reducer = (state, action) => {
     // state ที่เราต้องการให้เกิด action
     // action คือรูปแบบการกระทำต่างๆมี่เราจะทำกับ state
@@ -70,21 +70,26 @@ function App() {
   }
 
   // การเรียกใช้ reducer
-  const [result, dispatch] = useReducer(reducer,count)
+  // const [result, dispatch] = useReducer(reducer,count)
 
   // reducer showReport
   const [showReport, setShowReport] = useState(true)
+  
   const showReportReducer = (state, action) => {
     // state ที่เราต้องการให้เกิด action
-    // action คือรูปแบบการกระทำต่างๆมี่เราจะทำกับ state
+    // action คือรูปแบบการกระทำต่างๆ ที่เราจะทำกับ state
     switch(action.type){
       case "SHOW" :
-        return setShowReport(true)
+        return setShowReport(true);
       case "HIDE" :
-        return setShowReport(false)
+        return setShowReport(false);
+      default:
+        // จัดการกรณีที่ไม่มี case ตรงกับ action.type
+        return state;
     }
   }
-  const [showReportResult, showReportDispatch] = useReducer(showReportReducer,count)
+  
+  // const [showReportResult, showReportDispatch] = useReducer(showReportReducer,count)
 
   return (
     <>
