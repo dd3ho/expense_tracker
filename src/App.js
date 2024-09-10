@@ -1,4 +1,4 @@
-import { useEffect, useReducer,  useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
 import FormComponent from './components/FormComponent'
@@ -73,21 +73,21 @@ function App() {
   // const [result, dispatch] = useReducer(reducer,count)
 
   //reducer showReport
-  const [showReport, setShowReport] = useState(true)
+  // const [showReport, setShowReport] = useState(true)
   
-  const showReportReducer = (state, action) => {
-    // state ที่เราต้องการให้เกิด action
-    // action คือรูปแบบการกระทำต่างๆ ที่เราจะทำกับ state
-    switch(action.type){
-      case "SHOW" :
-        return setShowReport(true);
-      case "HIDE" :
-        return setShowReport(false);
-      default:
-        // จัดการกรณีที่ไม่มี case ตรงกับ action.type
-        return state;
-    }
-  }
+  // const showReportReducer = (state, action) => {
+  //   // state ที่เราต้องการให้เกิด action
+  //   // action คือรูปแบบการกระทำต่างๆ ที่เราจะทำกับ state
+  //   switch(action.type){
+  //     case "SHOW" :
+  //       return setShowReport(true);
+  //     case "HIDE" :
+  //       return setShowReport(false);
+  //     default:
+  //       // จัดการกรณีที่ไม่มี case ตรงกับ action.type
+  //       return state;
+  //   }
+  // }
   
   // const [showReportResult, showReportDispatch] = useReducer(showReportReducer,count)
 
@@ -109,7 +109,7 @@ function App() {
           </ul>
           <Routes>
              {/* อ้างอิง path ที่ผุ้ใช้เลิอกแล้วไปยังส่วนนั้น */}
-            <Route path="/" element={showReport && <ReportComponent/>} />
+            <Route path="/" element={<ReportComponent/>} />
             <Route path="/insert" element={
             <>
               <FormComponent onAddItem={onAddNewItem} />
