@@ -94,6 +94,7 @@ function App() {
   return (
     <>
     <div className='container'>
+    <h1>Test</h1>
     <DataContext.Provider value={{income: reportIncome, expense: reportExpense}}>
         <Title/>
         <Router>
