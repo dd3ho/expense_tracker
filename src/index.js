@@ -1,17 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import './index.css'
+import reportWebVitals from './reportWebVitals'
+import HelloComponent from './components/HelloComponent'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// ReactDOM.render(< App/>,document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App/>);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
+
+
+
+// const data = (
+//   <h1>Hello react</h1>
+// )
+// ReactDOM.render(data,document.getElementById('root'));
+// ReactDOM.render(<App/>,document.getElementById('root'));
+
+
+// การสร้าง component
+// function HelloComponent(){
+//   return <h1>Hello React</h1>
+// }
+
+// ReactDOM.render(< HelloComponent/>,document.getElementById('root'));
+
+// class HelloComponent extends React.Component {
+//   render() {
+//     return <h1>Hello React class Component</h1>
+//   }
+// }
+// ReactDOM.render(< HelloComponent/>,document.getElementById('root'));
+
+
+
+
 reportWebVitals();

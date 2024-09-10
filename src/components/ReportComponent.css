@@ -1,0 +1,37 @@
+.report-container {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  /* flex: 1; */
+  justify-content: space-between;
+  background-color: aliceblue;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.report-container div {
+  flex: 1;
+  /* div ที่อยู่ใน report container ขยายเท่ากันหมด */
+  text-align: center;
+}
+
+.report-container div:first-of-type {
+  /* div ตัวแรก ใน container */
+  border-right: 1px solid #b1b1b1;
+}
+
+.report {
+  font-size: 20px;
+  letter-spacing: 1px;
+  /*ระยะห่างระหว่างตัวอักษรแต่ละตัวอักษร*/
+  margin: 5px 0;
+
+}
+
+.report.plus {
+  color: #2ecc71
+}
+
+.report.minus {
+  color: red;
+}
