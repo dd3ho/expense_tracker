@@ -1,4 +1,4 @@
-import { useEffect,  useState } from 'react'
+import { useEffect, useReducer,  useState } from 'react'
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
 import FormComponent from './components/FormComponent'
@@ -89,7 +89,7 @@ function App() {
     }
   }
   
-  const [showReportResult, showReportDispatch] = useReducer(showReportReducer,count)
+  // const [showReportResult, showReportDispatch] = useReducer(showReportReducer,count)
 
   return (
     <>
