@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from 'react'
+import { useEffect,  useState } from 'react'
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
 import FormComponent from './components/FormComponent'
@@ -56,38 +56,38 @@ function App() {
 
   // reducer state
   // const [count, setCount] =useState(0)
-  const reducer = (state, action) => {
-    // state ที่เราต้องการให้เกิด action
-    // action คือรูปแบบการกระทำต่างๆมี่เราจะทำกับ state
-    switch(action.type){
-      case "ADD" :
-        return state+action.payload
-      case "SUB" :
-        return state-action.payload
-      case "CLEAR":
-        return 0
-    }
-  }
+  // const reducer = (state, action) => {
+  //   // state ที่เราต้องการให้เกิด action
+  //   // action คือรูปแบบการกระทำต่างๆมี่เราจะทำกับ state
+  //   switch(action.type){
+  //     case "ADD" :
+  //       return state+action.payload
+  //     case "SUB" :
+  //       return state-action.payload
+  //     case "CLEAR":
+  //       return 0
+  //   }
+  // }
 
   // การเรียกใช้ reducer
   // const [result, dispatch] = useReducer(reducer,count)
 
   // reducer showReport
-  const [showReport, setShowReport] = useState(true)
+  // const [showReport, setShowReport] = useState(true)
   
-  const showReportReducer = (state, action) => {
-    // state ที่เราต้องการให้เกิด action
-    // action คือรูปแบบการกระทำต่างๆ ที่เราจะทำกับ state
-    switch(action.type){
-      case "SHOW" :
-        return setShowReport(true);
-      case "HIDE" :
-        return setShowReport(false);
-      default:
-        // จัดการกรณีที่ไม่มี case ตรงกับ action.type
-        return state;
-    }
-  }
+  // const showReportReducer = (state, action) => {
+  //   // state ที่เราต้องการให้เกิด action
+  //   // action คือรูปแบบการกระทำต่างๆ ที่เราจะทำกับ state
+  //   switch(action.type){
+  //     case "SHOW" :
+  //       return setShowReport(true);
+  //     case "HIDE" :
+  //       return setShowReport(false);
+  //     default:
+  //       // จัดการกรณีที่ไม่มี case ตรงกับ action.type
+  //       return state;
+  //   }
+  // }
   
   // const [showReportResult, showReportDispatch] = useReducer(showReportReducer,count)
 
