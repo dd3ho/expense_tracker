@@ -3,7 +3,7 @@ name: Deploy to Netlify
 on:
   push:
     branches:
-      - main # เปลี่ยนเป็น branch ที่คุณต้องการให้ deploy
+      - master # branch deploy
 
 jobs:
   deploy:
